@@ -1,0 +1,118 @@
+/* General Reset & Font */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+/* Header */
+h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #004080;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Container */
+form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
+}
+
+/* Form Controls */
+form .form-control,
+form .form-select {
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+form .form-control:focus,
+form .form-select:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+  outline: none;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #0066cc;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #004d99;
+}
+
+.btn-secondary {
+  background-color: #999;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #777;
+}
+
+/* Table */
+.table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.table thead {
+  background-color: #004080;
+  color: white;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f8ff;
+}
+
+/* File input custom */
+input[type="file"] {
+  font-size: 15px;
+  padding: 5px;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: white;
+}
+
+.status-belum {
+  background-color: #f39c12;
+}
+
+.status-sudah {
+  background-color: #2ecc71;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+}
