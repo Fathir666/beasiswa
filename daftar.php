@@ -3,37 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <title>Formulir Pendaftaran</title>
+
+  <!-- Link ke Bootstrap CSS dari CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Link ke file CSS kustom -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Link ke file JavaScript validasi dengan defer agar dijalankan setelah halaman dimuat -->
   <script src="js/validasi.js" defer></script>
 </head>
 <body>
+
+<!-- Navigasi utama -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
+    <!-- Judul navbar -->
     <a class="navbar-brand" href="#">Beasiswa</a>
+
+    <!-- Menu navigasi -->
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto">
+        <!-- Tautan ke halaman pilihan beasiswa -->
         <li class="nav-item"><a class="nav-link" href="index.php">Pilihan Beasiswa</a></li>
+        <!-- Tautan ke halaman daftar (aktif saat ini) -->
         <li class="nav-item"><a class="nav-link active" href="daftar.php">Daftar</a></li>
+        <!-- Tautan ke halaman hasil -->
         <li class="nav-item"><a class="nav-link" href="hasil.php">Hasil</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- Konten utama -->
 <div class="container mt-4">
+  <!-- Judul form -->
   <h3>Formulir Pendaftaran Beasiswa</h3>
+
+  <!-- Formulir pendaftaran -->
   <form action="proses_daftar.php" method="post" enctype="multipart/form-data" id="formDaftar">
+    
+    <!-- Input Nama Lengkap -->
     <div class="mb-3">
       <label for="nama" class="form-label">Nama Lengkap</label>
       <input type="text" name="nama" id="nama" class="form-control" required>
     </div>
 
+    <!-- Input Email -->
     <div class="mb-3">
       <label for="email" class="form-label">Email</label>
       <input type="email" name="email" id="email" class="form-control" required>
+      
+      <!-- Area untuk pesan kesalahan validasi email -->
       <div class="invalid-feedback" id="emailError"></div>
     </div>
+
 
     <div class="mb-3">
       <label for="hp" class="form-label">No. HP</label>

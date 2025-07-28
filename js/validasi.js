@@ -1,4 +1,6 @@
+// Tunggu hingga seluruh konten DOM dimuat
 document.addEventListener("DOMContentLoaded", function () {
+  // Ambil elemen-elemen form berdasarkan ID
   const email = document.getElementById("email");
   const hp = document.getElementById("hp");
   const semester = document.getElementById("semester");
@@ -7,27 +9,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const berkas = document.getElementById("berkas");
   const btnDaftar = document.getElementById("btnDaftar");
 
-  // Validasi email format
+  // Validasi input email secara real-time
   email.addEventListener("input", function () {
     const emailError = document.getElementById("emailError");
+    // Regex untuk format email dasar
     const regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
     if (!regex.test(email.value)) {
+      // Jika tidak valid, tampilkan pesan error dan tambahkan class is-invalid
       email.classList.add("is-invalid");
       emailError.textContent = "Format email tidak valid";
     } else {
+      // Jika valid, hapus pesan error dan class is-invalid
       email.classList.remove("is-invalid");
       emailError.textContent = "";
     }
   });
 
-  // Validasi nomor HP
+  // Validasi input nomor HP secara real-time
   hp.addEventListener("input", function () {
     const hpError = document.getElementById("hpError");
+    // Regex untuk angka 10-15 digit
     const regex = /^[0-9]{10,15}$/;
+
     if (!regex.test(hp.value)) {
+      // Jika tidak valid, tampilkan pesan error
       hp.classList.add("is-invalid");
       hpError.textContent = "Nomor HP harus 10-15 digit angka";
     } else {
+      // Jika valid, hapus error
       hp.classList.remove("is-invalid");
       hpError.textContent = "";
     }
@@ -35,13 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Hitung IPK otomatis saat semester dipilih
   semester.addEventListener("change", function () {
-    let sem = parseInt(this.value);
+    let sem = parseInt(this.value); // Ambil nilai semester sebagai angka
+
     if (!isNaN(sem)) {
+      // Hitung IPK berdasarkan rumus (misal: 2.5 + semester x 0.1)
       ipk.value = (2.5 + (sem * 0.1)).toFixed(2);
+
+      // Aktifkan field lain setelah semester valid dipilih
       beasiswa.disabled = false;
       berkas.disabled = false;
       btnDaftar.disabled = false;
     } else {
+      // Reset jika semester tidak valid
       ipk.value = "";
       beasiswa.disabled = true;
       berkas.disabled = true;

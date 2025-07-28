@@ -1,35 +1,45 @@
-/* General Reset & Font */
+/* =======================
+   General Reset & Font
+======================= */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f7fa;
-  color: #333;
-  padding-bottom: 50px;
+  background-color: #f4f7fa; /* Warna latar belakang lembut */
+  color: #333;               /* Warna teks utama */
+  padding-bottom: 50px;      /* Spasi bawah halaman */
   margin: 0;
 }
 
-/* Header */
+/* =======================
+   Header Style
+======================= */
 h3 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 600;
-  color: #004080;
+  color: #004080; /* Biru gelap */
 }
 
-/* Navbar */
+/* =======================
+   Navbar
+======================= */
 .navbar {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
-/* Form Container */
+/* =======================
+   Form Container
+======================= */
 form {
-  background: #fff;
+  background: #fff;                         /* Warna putih untuk form */
   padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;                      /* Sudut membulat */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.06); /* Efek bayangan lembut */
   margin-bottom: 30px;
 }
 
-/* Form Controls */
+/* =======================
+   Form Controls
+======================= */
 form .form-control,
 form .form-select {
   border-radius: 6px;
@@ -40,33 +50,37 @@ form .form-select {
 
 form .form-control:focus,
 form .form-select:focus {
-  border-color: #0066cc;
-  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+  border-color: #0066cc;                        /* Biru saat focus */
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);    /* Efek glow */
   outline: none;
 }
 
-/* Buttons */
+/* =======================
+   Button Styles
+======================= */
 .btn-primary {
-  background-color: #0066cc;
+  background-color: #0066cc; /* Biru utama */
   border: none;
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #004d99;
+  background-color: #004d99; /* Biru lebih gelap saat hover */
 }
 
 .btn-secondary {
-  background-color: #999;
+  background-color: #999; /* Abu-abu */
   border: none;
   transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background-color: #777;
+  background-color: #777; /* Abu-abu lebih gelap saat hover */
 }
 
-/* Table */
+/* =======================
+   Table Styles
+======================= */
 .table {
   background-color: #fff;
   border-radius: 8px;
@@ -76,21 +90,25 @@ form .form-select:focus {
 }
 
 .table thead {
-  background-color: #004080;
+  background-color: #004080; /* Biru gelap untuk header tabel */
   color: white;
 }
 
 .table tbody tr:hover {
-  background-color: #f0f8ff;
+  background-color: #f0f8ff; /* Highlight baris saat hover */
 }
 
-/* File input custom */
+/* =======================
+   File Input
+======================= */
 input[type="file"] {
   font-size: 15px;
   padding: 5px;
 }
 
-/* Status Badge */
+/* =======================
+   Status Badge (Verifikasi)
+======================= */
 .status-badge {
   padding: 5px 10px;
   border-radius: 20px;
@@ -99,20 +117,22 @@ input[type="file"] {
 }
 
 .status-belum {
-  background-color: #f39c12;
+  background-color: #f39c12; /* Kuning untuk "Belum Diverifikasi" */
 }
 
 .status-sudah {
-  background-color: #2ecc71;
+  background-color: #2ecc71; /* Hijau untuk "Terverifikasi" */
 }
 
-/* Responsive tweaks */
+/* =======================
+   Responsiveness (Mobile)
+======================= */
 @media (max-width: 768px) {
   form {
-    padding: 15px;
+    padding: 15px; /* Form lebih ramping di layar kecil */
   }
 
   h3 {
-    font-size: 22px;
+    font-size: 22px; /* Ukuran judul lebih kecil */
   }
 }
