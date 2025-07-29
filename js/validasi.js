@@ -45,22 +45,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Hitung IPK otomatis saat semester dipilih
   semester.addEventListener("change", function () {
-    let sem = parseInt(this.value); // Ambil nilai semester sebagai angka
+  let sem = parseInt(this.value); // Ambil nilai semester sebagai angka
 
-    if (!isNaN(sem)) {
-      // Hitung IPK berdasarkan rumus (misal: 2.5 + semester x 0.1)
-      ipk.value = (2.5 + (sem * 0.1)).toFixed(2);
+  if (!isNaN(sem)) {
+    // Hitung IPK otomatis
+    let nilaiIpk = (2.5 + (sem * 0.1)).toFixed(2);
+    ipk.value = nilaiIpk;
 
-      // Aktifkan field lain setelah semester valid dipilih
+    if (nilaiIpk >= 3.0) {
+      // Jika IPK mencukupi, aktifkan form
       beasiswa.disabled = false;
       berkas.disabled = false;
       btnDaftar.disabled = false;
     } else {
-      // Reset jika semester tidak valid
-      ipk.value = "";
+      // Jika IPK < 3.0, tetap nonaktif
       beasiswa.disabled = true;
       berkas.disabled = true;
       btnDaftar.disabled = true;
+      alert("IPK minimal untuk mendaftar beasiswa adalah 3.00");
     }
-  });
+  } else {
+    // Reset jika semester tidak valid
+    ipk.value = "";
+    beasiswa.disabled = true;
+    berkas.disabled = true;
+    btnDaftar.disabled = true;
+  }
+});
 });
